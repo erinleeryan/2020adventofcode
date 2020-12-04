@@ -13,29 +13,6 @@ input['okay_password'] = input['Count'].between(input['min'].astype('int'),input
 print('Passwords that have specified substring appear btwn min and max value, inclusive', input.okay_password.value_counts())
 
 
-input['pos_one'] = ""
-input['pos_two'] = ""
-input['combined_pos'] = ""
-
-input['pos_one'] = ""
-input['pos_two'] = ""
-input['combined_pos'] = ""
-
-for index, row in input.iterrows():
-     substring = row.requirement
-     password = row.password
-     position_one = int(row['min'])
-     position_two = int(row['max'])
-
-     if (password[position_one-1] == substring):
-         row['pos_one'] = True
-     else:
-         row['pos_one'] = False
-
-     if (password[position_two -1] == substring):
-         row.pos_two = True
-     else:
-         row.pos_two = False
 
 input['pos_one'] = ""
 input['pos_two'] = ""
